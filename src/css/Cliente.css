@@ -1,0 +1,232 @@
+.text-field {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 12pt;
+    -fx-text-fill: #eaeaea;
+    -fx-background-color: transparent;
+    -fx-border-radius: 2;
+    -fx-border-width: 2pt;
+    -fx-border-color: #383838;
+}
+.text-field:focused {
+    -fx-border-color: #00cc52;
+}
+
+.table-view {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.8;
+    
+    -fx-base: #1d1d1d;
+    -fx-control-inner-background: #1d1d1d;
+    -fx-background-color: #1d1d1d;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 30;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80%) 
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #00cc52;
+    -fx-text-fill: black;
+}
+
+#btnMeusDados {
+    -fx-background-image: url("../imagens/DiretorView/btnMeusDados.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnMeusDados:hover {
+    -fx-background-image: url("../imagens/DiretorView/btnMeusDadosHover.png");
+}
+
+#btnContas {
+    -fx-background-image: url("../imagens/ClienteView/btnContas.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnContas:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnContasHover.png");
+}
+
+#btnPagamentos {
+    -fx-background-image: url("../imagens/ClienteView/btnPagam.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnPagamentos:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnPagamHover.png");
+}
+
+#btnTransferencias {
+    -fx-background-image: url("../imagens/ClienteView/btnTransf.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnTransferencias:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnTransfHover.png");
+}
+
+#btnMensagens {
+    -fx-background-image: url("../imagens/ClienteView/btnNotif.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnMensagens:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnNotifHover.png");
+}
+
+#btnContasDeposito {
+    -fx-background-image: url("../imagens/ClienteView/btnDeposito.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnContasDeposito:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnDepositoHover.png");
+}
+
+#btnContasAbrirConta {
+    -fx-background-image: url("../imagens/ClienteView/btnAbrirConta.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnContasAbrirConta:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnAbrirContaHover.png");
+}
+
+#btnContasFecharConta {
+    -fx-background-image: url("../imagens/ClienteView/btnFecharConta.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnContasFecharConta:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnFecharContaHover.png");
+}
+
+#btnContasExtrato {
+    -fx-background-image: url("../imagens/ClienteView/btnExtrato.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnContasExtrato:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnExtratoHover.png");
+}
+
+#btnContasVoltar {
+    -fx-background-image: url("../imagens/ClienteView/btnVoltar.png");
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-border-color: transparent;
+}
+#btnContasVoltar:hover {
+    -fx-background-image: url("../imagens/ClienteView/btnVoltarHover.png");
+}
+
+#btnLogout {
+    -fx-background-image: url("../imagens/DiretorView/btnLogout.png");
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+}
+#btnLogout:hover {
+    -fx-background-image: url("../imagens/DiretorView/btnLogoutHover.png");
+}
+
+.button {
+    -fx-border-radius: 5px;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-color: #1d1d1d;
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 10pt;
+    -fx-text-fill: #d8d8d8;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.input .text-field .combo-box-base {
+         -fx-prompt-text-fill: #e2e2e2; 
+}
+.combo-box-base {
+    -fx-background-color: -fx-shadow-highlight-color, -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
+    -fx-text-fill: #e2e2e2;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+    
+}
+.combo-box-base {
+    -fx-background-color: #383838, #383838, #383838, #d8d8d8;
+    -fx-text-fill: #e2e2e2;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 2;
+    -fx-border-radius: 2;
+}
+
+.combo-box-popup .list-view
+ {
+   -fx-background-color: -fx-box-border, -fx-control-inner-background;
+   -fx-background-insets: 0, 1;
+ }
+ .combo-box-popup .list-view .list-cell
+ {
+-fx-background-color: #d8d8d8;
+-fx-text-fill: #232323;
+-fx-font-family: Segoe UI Semibold;
+ }
+ .combo-box-popup .list-view:focus .list-cell:focus {
+     -fx-background-color: #00cc52;
+     -fx-text-fill: black;
+ }
+
+
+#AnchorPane {
+    -fx-background-color: #232323;
+}
+
+#barraLateral {
+    -fx-background-color: #00cc52;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0 30 30 0;
+}
+
+#paneContas {
+        -fx-background-color: #00cc52;
+}
+

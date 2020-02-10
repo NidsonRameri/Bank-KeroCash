@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" disable="false" focusTraversable="true" pickOnBounds="true" prefHeight="490.0" prefWidth="840.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+  <children>
+    <ImageView id="logo-kerocash.png" fx:id="imgLogo" layoutX="140.0" layoutY="171.0">
+      <image>
+        <Image preserveRatio="true" smooth="true" url="@../imagens/LoginView/logo-kerocash.png" />
+      </image>
+    </ImageView>
+    <Line endX="46.0" endY="-111.0" layoutX="318.0" layoutY="258.0" startX="45.0" startY="86.0" stroke="#00cc52" strokeWidth="2.0" />
+    <TextField fx:id="txtLogin" layoutX="424.0" layoutY="175.0" prefHeight="34.0" prefWidth="266.0" promptText="Usuário" text="" />
+    <PasswordField fx:id="txtSenha" layoutX="424.0" layoutY="227.0" prefHeight="34.0" prefWidth="266.0" promptText="Senha" text="" />
+    <Button fx:id="btnConectar" defaultButton="false" layoutX="485.0" layoutY="288.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="145.0" text="CONECTAR" textFill="WHITE">
+      <font>
+        <Font name="Segoe UI Semibold" size="16.0" />
+      </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+    </Button>
+    <Button fx:id="btnEncerrar" mnemonicParsing="false" onAction="#encerrar" prefHeight="35.0" prefWidth="90.0" text="" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    <Button fx:id="btnClientesTeste" layoutX="709.0" layoutY="23.0" mnemonicParsing="false" onAction="#inserirClientesTeste" prefHeight="34.0" prefWidth="111.0" text="Clientes Teste">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+  </children>
+  <stylesheets>
+    <URL value="@../css/Login.css" />
+  </stylesheets>
+</AnchorPane>

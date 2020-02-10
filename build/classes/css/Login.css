@@ -1,0 +1,30 @@
+#txtLogin, #txtSenha {
+    -fx-border-radius: 8;
+    -fx-font-size: 12pt;
+    -fx-border-color: #00cc52;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}   
+#btnConectar {
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-font-size: 13pt; 
+    -fx-border-radius: 10;
+    -fx-background-color: #00cc52;
+}
+#btnConectar:hover {
+    -fx-background-color: #237034;
+}
+#btnEncerrar {
+    -fx-background-image: url("../imagens/LoginView/btnEncerrar.png");
+    -fx-alignment: CENTER;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+}
+#btnEncerrar:hover {
+    -fx-background-image: url("../imagens/LoginView/btnEncerrarHover.png");
+    -fx-alignment: CENTER;
+    -fx-background-repeat: no-repeat;
+}
+#AnchorPane {
+    -fx-background-color: #232323;
+}

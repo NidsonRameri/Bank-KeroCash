@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1048.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NovoAdminController">
+  <children>
+    <Text fill="WHITE" layoutX="815.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Função:">
+      <font>
+        <Font name="Segoe UI Semilight" size="18.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Button fx:id="btnNovo" layoutX="753.0" layoutY="240.0" mnemonicParsing="false" onAction="#novo" prefHeight="45.0" prefWidth="112.0" text="NOVO">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    <Button fx:id="btnFechar" layoutX="495.0" layoutY="240.0" mnemonicParsing="false" onAction="#fechar" prefHeight="45.0" prefWidth="112.0" text="FECHAR">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    <Button fx:id="btnLimpar" disable="true" layoutX="624.0" layoutY="240.0" mnemonicParsing="false" onAction="#limpar" prefHeight="45.0" prefWidth="112.0" text="LIMPAR">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    <Button fx:id="btnCadastrar" disable="true" layoutX="883.0" layoutY="240.0" mnemonicParsing="false" onAction="#adicionarAdm" prefHeight="45.0" prefWidth="135.0" text="CADASTRAR">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+    <TextField fx:id="txtNovoAdmTelefone" disable="true" layoutX="384.0" layoutY="174.0" prefHeight="37.0" prefWidth="197.0" promptText="" />
+    <Text fill="WHITE" font="$x1" layoutX="385.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" />
+    <TextField fx:id="txtNovoAdmId" disable="true" layoutX="681.0" layoutY="101.0" prefHeight="37.0" prefWidth="112.0" promptText="" />
+    <Text fill="WHITE" font="$x1" layoutX="681.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+    <Text fill="WHITE" font="$x1" layoutX="50.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
+    <TextField fx:id="txtNovoAdmCpf" disable="true" layoutX="50.0" layoutY="174.0" prefHeight="37.0" prefWidth="312.0" promptText="" />
+    <Text fill="WHITE" font="$x1" layoutX="50.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+    <TextField fx:id="txtNovoAdmNome" disable="true" layoutX="50.0" layoutY="102.0" prefHeight="37.0" prefWidth="616.0" promptText="" />
+    <TextField fx:id="txtNovoAdmLogin" disable="true" layoutX="606.0" layoutY="175.0" prefHeight="37.0" prefWidth="209.0" promptText="" />
+    <Text fill="WHITE" font="$x1" layoutX="606.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" />
+    <Text fill="WHITE" font="$x1" layoutX="842.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+    <PasswordField fx:id="txtNovoAdmSenha" disable="true" layoutX="842.0" layoutY="175.0" prefHeight="37.0" prefWidth="176.0" />
+    <ComboBox fx:id="cbNovoAdmFuncao" layoutX="814.0" layoutY="100.0" prefHeight="37.0" prefWidth="203.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ComboBox>
+  </children>
+  <stylesheets>
+    <URL value="@../css/NovoClienteAdminView.css" />
+  </stylesheets>
+</AnchorPane>

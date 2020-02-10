@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="738.0" prefWidth="1366.0" stylesheets="@../css/Cliente.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClienteController">
+   <children>
+      <Button fx:id="barraLateral" mnemonicParsing="false" prefHeight="740.0" prefWidth="324.0" />
+      <Text fill="WHITE" layoutX="48.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo,">
+         <font>
+            <Font name="Segoe UI" size="22.0" fx:id="x1" />
+         </font>
+      </Text>
+      <Text fx:id="lblCliente" fill="WHITE" layoutX="48.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário">
+         <font>
+            <Font name="Segoe UI Bold" size="28.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnPagamentos" layoutX="34.0" layoutY="351.0" mnemonicParsing="false" onAction="#abrirOpcoesPagamento" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnContas" layoutX="34.0" layoutY="273.0" mnemonicParsing="false" onAction="#abrirOpcoesContas" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnLogout" layoutX="34.0" layoutY="649.0" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="143.0" styleClass="btnMenu" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnMeusDados" layoutX="34.0" layoutY="191.0" mnemonicParsing="false" onAction="#abrirPainelMeusDados" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnTransferencias" layoutX="34.0" layoutY="428.0" mnemonicParsing="false" onAction="#abrirOpcoesTransferencias" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnMensagens" layoutX="34.0" layoutY="505.0" mnemonicParsing="false" onAction="#abrirPainelMensagens" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="novaMensagem" fill="#f80000" layoutX="186.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo!!">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Pane fx:id="paneTabelaContas" layoutX="338.0" layoutY="6.0" prefHeight="260.0" prefWidth="1022.0" visible="false">
+         <children>
+            <TableView fx:id="tabelaContas" layoutX="37.0" layoutY="20.0" onKeyPressed="#selecionarTabelaClientesContas" onMouseClicked="#selecionarTabelaClientesContas" prefHeight="210.0" prefWidth="564.0">
+              <columns>
+                <TableColumn fx:id="colunaContasConta" prefWidth="146.0" text="CONTA" />
+                <TableColumn fx:id="colunaContasAgencia" prefWidth="166.0" text="AGÊNCIA" />
+                  <TableColumn fx:id="colunaContasTipo" prefWidth="243.0" text="TIPO" />
+              </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <TextField fx:id="txtSaldo" editable="false" layoutX="614.0" layoutY="164.0" prefHeight="37.0" prefWidth="110.0" promptText="" />
+            <TextField fx:id="txtTipo" editable="false" layoutX="848.0" layoutY="48.0" prefHeight="37.0" prefWidth="126.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="615.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo:" />
+            <Text fill="WHITE" font="$x2" layoutX="846.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo:" />
+            <Text fill="WHITE" font="$x2" layoutX="616.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conta:" />
+            <TextField fx:id="txtConta" editable="false" layoutX="615.0" layoutY="48.0" prefHeight="37.0" prefWidth="108.0" promptText="" />
+            <TextField fx:id="txtAgencia" editable="false" layoutX="739.0" layoutY="48.0" prefHeight="37.0" prefWidth="101.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="739.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agência:" />
+            <Text fill="WHITE" font="$x2" layoutX="784.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Segundo Titular:" />
+            <TextField fx:id="txtSegundoTitular" editable="false" layoutX="784.0" layoutY="110.0" prefHeight="37.0" prefWidth="189.0" promptText="" />
+            <TextField fx:id="txtSenha" editable="false" layoutX="737.0" layoutY="164.0" prefHeight="37.0" prefWidth="101.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="742.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+            <TextField fx:id="txtPrimeiroTitular" editable="false" layoutX="615.0" layoutY="110.0" prefHeight="37.0" prefWidth="156.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="616.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Primeiro Titular:" />
+            <Text fill="WHITE" font="$x2" layoutX="841.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Limite:" />
+            <TextField fx:id="txtLimite" editable="false" layoutX="846.0" layoutY="164.0" prefHeight="37.0" prefWidth="126.0" promptText="" />
+            <Button fx:id="btnPedirAumento" disable="true" layoutX="818.0" layoutY="212.0" mnemonicParsing="false" onAction="#pedirAumento" prefHeight="37.0" prefWidth="156.0" text="PEDIR AUMENTO">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneContas" layoutX="6.0" layoutY="180.0" prefHeight="436.0" prefWidth="304.0" visible="false">
+         <children>
+            <Button fx:id="btnContasDeposito" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#abrirOpcoesContasDeposito" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnContasAbrirConta" layoutX="27.0" layoutY="93.0" mnemonicParsing="false" onAction="#abrirOpcoesContasAbrirConta" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnContasFecharConta" layoutX="27.0" layoutY="171.0" mnemonicParsing="false" onAction="#abrirOpcoesContasFecharConta" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnContasExtrato" layoutX="27.0" layoutY="248.0" mnemonicParsing="false" onAction="#extrato" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnContasVoltar" layoutX="27.0" layoutY="356.0" mnemonicParsing="false" onAction="#limpar" prefHeight="59.0" prefWidth="168.0" styleClass="btnMenu">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneMeusDados" layoutX="324.0" layoutY="7.0" prefHeight="729.0" prefWidth="1041.0" visible="false">
+         <children>
+            <Button fx:id="btnMeusDadoseExcluirMinhaConta" layoutX="37.0" layoutY="365.0" mnemonicParsing="false" onAction="#excluirConta" prefHeight="45.0" prefWidth="228.0" text="EXCLUIR MINHA CONTA">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <PasswordField fx:id="txtMeusDadosSenha" editable="false" layoutX="345.0" layoutY="272.0" prefHeight="37.0" prefWidth="312.0" />
+            <Button fx:id="btnMeusDadosFechar" layoutX="397.0" layoutY="365.0" mnemonicParsing="false" onAction="#limpar" prefHeight="45.0" prefWidth="143.0001220703125" text="FECHAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMeusDadosConfirmar" disable="true" layoutX="861.0" layoutY="365.0" mnemonicParsing="false" onAction="#confirmarEditarMeusDados" prefHeight="45.0" prefWidth="143.0001220703125" text="CONFIRMAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMeusDadosEditar" layoutX="707.0" layoutY="365.0" mnemonicParsing="false" onAction="#editarMeusDados" prefHeight="45.0" prefWidth="143.00009999999747" text="EDITAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMeusDadosCancelar" disable="true" layoutX="552.0" layoutY="365.0" mnemonicParsing="false" onAction="#cancelarEditarMeusDados" prefHeight="45.0" prefWidth="143.0001220703125" text="CANCELAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txtMeusDadosLogin" editable="false" layoutX="37.0" layoutY="274.0" prefHeight="37.0" prefWidth="274.0" promptText="" />
+            <TextField fx:id="txtMeusDadosTelefone" editable="false" layoutX="692.0" layoutY="199.0" prefHeight="37.0" prefWidth="312.0" promptText="" />
+            <TextField fx:id="txtMeusDadosId" editable="false" layoutX="717.0" layoutY="128.0" prefHeight="37.0" prefWidth="287.0" promptText="" />
+            <TextField fx:id="txtMeusDadosCpf" editable="false" layoutX="345.0" layoutY="199.0" prefHeight="37.0" prefWidth="312.0" promptText="" />
+            <TextField fx:id="txtMeusDadosGerente" editable="false" layoutX="37.0" layoutY="199.0" prefHeight="37.0" prefWidth="274.0" promptText="" />
+            <Text fill="WHITE" layoutX="37.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" fx:id="x2" />
+               </font>
+            </Text>
+            <TextField fx:id="txtMeusDadosNome" editable="false" layoutX="37.0" layoutY="128.0" prefHeight="37.0" prefWidth="655.0" promptText="" />
+            <Text fill="WHITE" layoutX="463.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meus Dados">
+               <font>
+                  <Font name="Segoe UI Black" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" font="$x2" layoutX="36.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" />
+            <Text fill="WHITE" font="$x2" layoutX="347.0" layoutY="265.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+            <Text fill="WHITE" font="$x2" layoutX="349.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cpf:" />
+            <Text fill="WHITE" font="$x2" layoutX="37.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gerente:" />
+            <Text fill="WHITE" font="$x2" layoutX="717.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+            <Text fill="WHITE" font="$x2" layoutX="692.0" layoutY="195.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneMensagens" layoutX="338.0" layoutY="10.0" prefHeight="740.0" prefWidth="1048.0" visible="false">
+         <children>
+            <Pane fx:id="paneMensagensVisualizar" layoutX="1.0" layoutY="416.0" prefHeight="322.0" prefWidth="1048.0" visible="false">
+               <children>
+                  <Button fx:id="btnMensagensAprovar" layoutX="854.0" layoutY="176.0" mnemonicParsing="false" onAction="#aprovarMensagem" prefHeight="51.0" prefWidth="132.0" text="APROVAR">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button fx:id="btnMensagensNegar" layoutX="854.0" layoutY="238.0" mnemonicParsing="false" onAction="#negarMensagem" prefHeight="51.0" prefWidth="132.0" text="NEGAR">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField fx:id="txtMensagensMensagem" alignment="TOP_LEFT" editable="false" layoutX="41.0" layoutY="176.0" prefHeight="113.0" prefWidth="757.0" />
+                  <TextField fx:id="txtMensagensTitulo" editable="false" layoutX="42.0" layoutY="38.0" prefHeight="37.0" prefWidth="757.0" />
+                  <TextField fx:id="txtMensagensRemetente" editable="false" layoutX="42.0" layoutY="105.0" prefHeight="37.0" prefWidth="346.0" />
+                  <Text fill="WHITE" font="$x2" layoutX="41.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensagem:" />
+                  <Text fill="WHITE" font="$x2" layoutX="42.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título:" />
+                  <Text fill="WHITE" font="$x2" layoutX="42.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remetente:" />
+               </children>
+            </Pane>
+            <TableView fx:id="tabelaMensagens" layoutX="41.0" layoutY="40.0" onKeyPressed="#selecionarTabelaMensagens" onMouseClicked="#selecionarTabelaMensagens" prefHeight="352.0" prefWidth="757.0">
+               <columns>
+                  <TableColumn fx:id="ColunaMensagensTitulo" prefWidth="341.0" text="TITULO" />
+                  <TableColumn fx:id="ColunaMensagensRemetente" minWidth="0.0" prefWidth="209.0" text="REMETENTE" />
+                  <TableColumn fx:id="ColunaMensagensLido" minWidth="0.0" prefWidth="69.0" text="LIDO" />
+                  <TableColumn fx:id="ColunaMensagensRespondido" prefWidth="133.0" text="RESPONDIDO" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Button fx:id="btnMensagensAbrir" layoutX="823.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirMensagem" prefHeight="60.0" prefWidth="197.0" text="ABRIR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMensagensExcluir" layoutX="823.0" layoutY="246.0" mnemonicParsing="false" onAction="#excluirMensagem" prefHeight="60.0" prefWidth="197.0" text="EXCLUIR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="panePagamentos" layoutX="324.0" layoutY="266.0" prefHeight="482.0" prefWidth="1062.0" visible="false">
+         <children>
+            <Button fx:id="btnPagar" layoutX="59.0" layoutY="196.0" mnemonicParsing="false" onAction="#confirmarPagamento" prefHeight="51.0" prefWidth="131.0" text="PAGAR" />
+            <TextField fx:id="txtPagamentosValor" layoutX="57.0" layoutY="100.0" prefHeight="37.0" prefWidth="134.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="59.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor a ser pago:" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneTransferencias" layoutX="330.0" layoutY="266.0" prefHeight="482.0" prefWidth="1054.0" visible="false">
+         <children>
+            <TextField fx:id="txtTransferenciasConta" layoutX="47.0" layoutY="71.0" prefHeight="37.0" prefWidth="134.0" promptText="" />
+            <TextField fx:id="txtTransferenciasAgencia" layoutX="48.0" layoutY="140.0" prefHeight="37.0" prefWidth="134.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="47.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conta:" />
+            <Text fill="WHITE" font="$x2" layoutX="48.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agência:" />
+            <TextField fx:id="txtTransferenciasNome" layoutX="47.0" layoutY="215.0" prefHeight="37.0" prefWidth="304.0" promptText="" />
+            <TextField fx:id="txtTransferenciasCpf" layoutX="47.0" layoutY="292.0" prefHeight="37.0" prefWidth="304.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="46.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+            <Text fill="WHITE" font="$x2" layoutX="48.0" layoutY="280.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cpf:" />
+            <Button fx:id="btnTransferenciasTransferir" layoutX="471.0" layoutY="367.0" mnemonicParsing="false" onAction="#confirmarTransferencia" prefHeight="51.0" prefWidth="143.0" text="Transferir">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Text fill="WHITE" font="$x2" layoutX="47.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor:" />
+            <TextField fx:id="txtTransferenciasValor" layoutX="47.0" layoutY="374.0" prefHeight="37.0" prefWidth="134.0" promptText="" />
+         </children>
+      </Pane>
+      <Pane fx:id="paneContasDeposito" layoutX="330.0" layoutY="270.0" prefHeight="476.0" prefWidth="624.0" visible="false">
+         <children>
+            <TextField fx:id="txtContasDepositoValor" layoutX="55.0" layoutY="88.0" prefHeight="37.0" prefWidth="143.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="55.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor:" />
+            <Button fx:id="btnContasDepositoDepositar" layoutX="55.0" layoutY="159.0" mnemonicParsing="false" onAction="#confirmarDeposito" prefHeight="51.0" prefWidth="143.0" text="Depositar">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneContasAbrirConta" layoutX="338.0" layoutY="266.0" prefHeight="465.0" prefWidth="912.0" visible="false">
+         <children>
+            <TextField fx:id="txtContasAbrirContaSenha" layoutX="28.0" layoutY="289.0" prefHeight="37.0" prefWidth="175.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="27.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+            <RadioButton fx:id="rbContasAbrirContasCorrente" layoutX="27.0" layoutY="74.0" mnemonicParsing="false" onAction="#txtSegundoTitularConjunta" text="Corrente" textFill="#f8f8f8">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="contas" />
+               </toggleGroup>
+            </RadioButton>
+            <Text fill="WHITE" layoutX="21.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de conta:">
+               <font>
+                  <Font name="Segoe UI Semilight" size="24.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="rbContasAbrirContasPoupanca" layoutX="27.0" layoutY="107.0" mnemonicParsing="false" onAction="#txtSegundoTitularConjunta" text="Poupança" textFill="#f8f8f8" toggleGroup="$contas">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="rbContasAbrirContasConjunta" layoutX="27.0" layoutY="142.0" mnemonicParsing="false" onAction="#txtSegundoTitularConjunta" text="Conjunta" textFill="#f8f8f8" toggleGroup="$contas">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </RadioButton>
+            <TextField fx:id="txtContasAbrirContaSegundoTitular" editable="false" layoutX="28.0" layoutY="214.0" prefHeight="37.0" prefWidth="294.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="28.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Segundo Titular:" />
+            <Button fx:id="btnContasAbrirContaAbrirConta" layoutX="28.0" layoutY="373.0" mnemonicParsing="false" onAction="#confirmarAbrirConta" prefHeight="51.0" prefWidth="143.0" text="Abrir Conta">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneContasFecharConta" layoutX="330.0" layoutY="275.0" prefHeight="465.0" prefWidth="692.0" visible="false">
+         <children>
+            <PasswordField fx:id="txtContasFecharContaSenha" layoutX="59.0" layoutY="91.0" />
+            <Text fill="WHITE" font="$x2" layoutX="59.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+            <Button fx:id="btnContasFecharContaFecharConta" layoutX="59.0" layoutY="357.0" mnemonicParsing="false" onAction="#confirmarFecharConta" prefHeight="51.0" prefWidth="143.0" text="Fechar Conta">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

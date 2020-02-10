@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="738.0" prefWidth="1366.0" stylesheets="@../css/Gerente.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GerenteController">
+   <children>
+      <Button fx:id="barraLateral" mnemonicParsing="false" prefHeight="740.0" prefWidth="324.0" />
+      <Button fx:id="btnMeusDados" layoutX="34.0" layoutY="191.0" mnemonicParsing="false" onAction="#abrirPainelMeusDados" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnLogout" layoutX="34.0" layoutY="649.0" mnemonicParsing="false" onAction="#logout" prefHeight="51.0" prefWidth="143.0" styleClass="btnMenu" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnClientes" layoutX="34.0" layoutY="273.0" mnemonicParsing="false" onAction="#abrirPainelClientes" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="btnMensagens" layoutX="34.0" layoutY="352.0" mnemonicParsing="false" onAction="#abrirPainelMensagens" prefHeight="59.0" prefWidth="250.0" styleClass="btnMenu" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="lblUsuario" fill="WHITE" layoutX="48.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário">
+         <font>
+            <Font name="Segoe UI Bold" size="28.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="48.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bem vindo,">
+         <font>
+            <Font name="Segoe UI" size="22.0" fx:id="x1" />
+         </font>
+      </Text>
+      <Pane fx:id="paneMeusDados" layoutX="328.0" layoutY="30.0" prefHeight="700.0" prefWidth="1048.0" visible="false">
+         <children>
+            <Text fill="WHITE" layoutX="464.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meus Dados">
+               <font>
+                  <Font name="Segoe UI Black" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txtMeusDadosNome" editable="false" layoutX="38.0" layoutY="167.0" prefHeight="37.0" prefWidth="655.0" promptText="" />
+            <Text fill="WHITE" layoutX="38.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:">
+               <font>
+                  <Font name="Segoe UI Semilight" size="18.0" fx:id="x2" />
+               </font>
+            </Text>
+            <Text fill="WHITE" font="$x2" layoutX="38.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Função:" />
+            <TextField fx:id="txtMeusDadosFuncao" editable="false" layoutX="38.0" layoutY="238.0" prefHeight="37.0" prefWidth="274.0" promptText="" />
+            <TextField fx:id="txtMeusDadosCpf" editable="false" layoutX="346.0" layoutY="238.0" prefHeight="37.0" prefWidth="312.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="346.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
+            <Text fill="WHITE" font="$x2" layoutX="718.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+            <TextField fx:id="txtMeusDadosId" editable="false" layoutX="718.0" layoutY="167.0" prefHeight="37.0" prefWidth="287.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="693.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" />
+            <TextField fx:id="txtMeusDadosTelefone" editable="false" layoutX="693.0" layoutY="238.0" prefHeight="37.0" prefWidth="312.0" promptText="" />
+            <TextField fx:id="txtMeusDadosLogin" editable="false" layoutX="38.0" layoutY="313.0" prefHeight="37.0" prefWidth="274.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="38.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" />
+            <Text fill="WHITE" font="$x2" layoutX="346.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+            <Button fx:id="btnMeusDadosCancelar" disable="true" layoutX="553.0" layoutY="404.0" mnemonicParsing="false" onAction="#cancelarEditarMeusDados" prefHeight="45.0" prefWidth="143.0001220703125" text="CANCELAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMeusDadosEditar" layoutX="708.0" layoutY="404.0" mnemonicParsing="false" onAction="#editarMeusDados" prefHeight="45.0" prefWidth="143.00009999999747" text="EDITAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMeusDadosConfirmar" disable="true" layoutX="862.0" layoutY="404.0" mnemonicParsing="false" onAction="#confirmarEditarMeusDados" prefHeight="45.0" prefWidth="143.0001220703125" text="CONFIRMAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnMeusDadosFechar" layoutX="398.0" layoutY="404.0" mnemonicParsing="false" onAction="#limpar" prefHeight="45.0" prefWidth="143.0001220703125" text="FECHAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <PasswordField fx:id="txtMeusDadosSenha" editable="false" layoutX="346.0" layoutY="311.0" prefHeight="37.0" prefWidth="312.0" />
+            <Button fx:id="btnMeusDadoseExcluirMinhaConta" layoutX="38.0" layoutY="404.0" mnemonicParsing="false" onAction="#excluirConta" prefHeight="45.0" prefWidth="228.0" text="EXCLUIR MINHA CONTA">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="paneClientes" layoutX="328.0" layoutY="40.0" prefHeight="700.0" prefWidth="1048.0" visible="false">
+         <children>
+            <TableView fx:id="tabelaClientesInfor" layoutX="39.0" layoutY="100.0" onMouseClicked="#selecionarTabelaCliente" prefHeight="263.0000999999975" prefWidth="558.0">
+               <columns>
+                  <TableColumn fx:id="ColunaClienteId" prefWidth="64.0" text="ID" />
+                  <TableColumn fx:id="ColunaClienteNome" prefWidth="192.0" text="NOME" />
+                  <TableColumn fx:id="ColunaClienteCpf" prefWidth="170.0" text="CPF" />
+                  <TableColumn fx:id="ColunaClienteLogin" prefWidth="131.0" text="LOGIN" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Button fx:id="btnClientesFechar" layoutX="533.0" layoutY="609.0" mnemonicParsing="false" onAction="#limpar" prefHeight="45.0" prefWidth="108.0" text="FECHAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClientesConfirmar" disable="true" layoutX="892.0" layoutY="609.0" mnemonicParsing="false" onAction="#confirmarEditarCliente" prefHeight="45.0" prefWidth="114.9998779296875" text="CONFIRMAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClientesEditar" disable="true" layoutX="651.0" layoutY="609.0" mnemonicParsing="false" onAction="#editarCliente" prefHeight="45.0" prefWidth="108.0" text="EDITAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClientesCancelar" disable="true" layoutX="775.0" layoutY="609.0" mnemonicParsing="false" onAction="#cancelarEditarCliente" prefHeight="45.0" prefWidth="108.0" text="CANCELAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txtClientesTelefone" editable="false" layoutX="373.0" layoutY="469.0" prefHeight="37.0" prefWidth="197.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="374.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" />
+            <TextField fx:id="txtClientesId" editable="false" layoutX="720.0" layoutY="398.0" prefHeight="37.0" prefWidth="47.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="720.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:" />
+            <Text fill="WHITE" font="$x2" layoutX="39.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" />
+            <TextField fx:id="txtClientesCpf" editable="false" layoutX="39.0" layoutY="469.0" prefHeight="37.0" prefWidth="312.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="39.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" />
+            <TextField fx:id="txtClientesNome" editable="false" layoutX="39.0" layoutY="398.0" prefHeight="37.0" prefWidth="655.0" promptText="" />
+            <Button fx:id="btnClientesExtrato" disable="true" layoutX="240.0" layoutY="609.0" mnemonicParsing="false" onAction="#extrato" prefHeight="45.0" prefWidth="114.9998779296875" text="EXTRATO">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="btnClientesExcluir" disable="true" layoutX="371.0" layoutY="609.0" mnemonicParsing="false" onAction="#excluirCliente" prefHeight="45.0" prefWidth="92.7891845703125" text="EXCLUIR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="txtClientesBusca" layoutX="39.0" layoutY="40.0" prefHeight="37.0" prefWidth="676.0" promptText="Insira o Nome, CPF ou Id..." />
+            <TableView fx:id="tabelaClientesContas" layoutX="623.0" layoutY="100.0" onKeyPressed="#selecionarTabelaClientesContas" onMouseClicked="#selecionarTabelaClientesContas" prefHeight="263.0" prefWidth="390.0">
+               <columns>
+                  <TableColumn fx:id="ColunaClienteTipo" prefWidth="95.0" text="TIPO" />
+                  <TableColumn fx:id="ColunaClienteConta" prefWidth="90.0" text="CONTA" />
+                  <TableColumn fx:id="ColunaClienteAgencia" prefWidth="96.0" text="AGÊNCIA" />
+                  <TableColumn fx:id="ColunaClienteSaldo" prefWidth="108.0" text="SALDO" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Text fill="WHITE" font="$x2" layoutX="298.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agência:" />
+            <TextField fx:id="txtClientesAgencia" editable="false" layoutX="297.0" layoutY="542.0" prefHeight="37.0" prefWidth="229.0" promptText="" />
+            <TextField fx:id="txtClientesConta" editable="false" layoutX="39.0" layoutY="542.0" prefHeight="37.0" prefWidth="229.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="40.0" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Conta:" />
+            <Text fill="WHITE" font="$x2" layoutX="555.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo:" />
+            <Text fill="WHITE" font="$x2" layoutX="802.0" layoutY="538.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saldo:" />
+            <TextField fx:id="txtClientesLogin" editable="false" layoutX="592.0" layoutY="469.0" prefHeight="37.0" prefWidth="209.0" promptText="" />
+            <Text fill="WHITE" font="$x2" layoutX="592.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login:" />
+            <Text fill="WHITE" font="$x2" layoutX="828.0" layoutY="461.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" />
+            <PasswordField fx:id="txtClientesSenha" editable="false" layoutX="831.0" layoutY="469.0" prefHeight="37.0" prefWidth="176.0" />
+            <TextField fx:id="txtClientesTipo" editable="false" layoutX="555.0" layoutY="542.0" prefHeight="37.0" prefWidth="229.0" promptText="" />
+            <TextField fx:id="txtClientesSaldo" editable="false" layoutX="801.0" layoutY="542.0" prefHeight="37.0" prefWidth="203.0" promptText="" />
+            <Button fx:id="btnClientesNovoCliente" layoutX="39.0" layoutY="609.0" mnemonicParsing="false" onAction="#abrirNovoCliente" prefHeight="60.0" prefWidth="125.0" text="">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Text fill="WHITE" font="$x2" layoutX="793.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gerente:" />
+            <TextField fx:id="txtClientesGerente" editable="false" layoutX="790.0" layoutY="398.0" prefHeight="37.0" prefWidth="217.0" promptText="" />
+            <Button fx:id="btnClientesBuscar" layoutX="899.0" layoutY="40.0" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="37.0" prefWidth="108.0" text="BUSCAR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ComboBox fx:id="cbClientesBusca" layoutX="727.0" layoutY="40.0" prefHeight="37.0" prefWidth="163.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+         </children>
+      </Pane>
+      <Pane fx:id="paneMensagens" layoutX="328.0" prefHeight="740.0" prefWidth="1048.0" visible="false">
+         <children>
+            <Pane fx:id="paneMensagensVisualizar" layoutX="1.0" layoutY="416.0" prefHeight="322.0" prefWidth="1048.0">
+               <children>
+                  <Button fx:id="btnMensagensAprovar" layoutX="854.0" layoutY="176.0" mnemonicParsing="false" onAction="#aprovarMensagem" prefHeight="51.0" prefWidth="132.0" text="APROVAR">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="btnMensagensNegar" layoutX="854.0" layoutY="238.0" mnemonicParsing="false" onAction="#negarMensagem" prefHeight="51.0" prefWidth="132.0" text="NEGAR">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <TextField fx:id="txtMensagensMensagem" alignment="TOP_LEFT" editable="false" layoutX="41.0" layoutY="176.0" prefHeight="113.0" prefWidth="757.0" />
+                  <TextField fx:id="txtMensagensTitulo" layoutX="42.0" layoutY="38.0" prefHeight="37.0" prefWidth="757.0" />
+                  <TextField fx:id="txtMensagensRemetente" editable="false" layoutX="42.0" layoutY="105.0" prefHeight="37.0" prefWidth="346.0" />
+                  <Text fill="WHITE" font="$x2" layoutX="41.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mensagem:" />
+                  <Text fill="WHITE" font="$x2" layoutX="42.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Título:" />
+                  <Text fill="WHITE" font="$x2" layoutX="42.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Remetente:" />
+                  <Button fx:id="btnVerCliente" layoutX="401.0" layoutY="106.0" mnemonicParsing="false" onAction="#extrato" prefHeight="37.0" prefWidth="125.0" text="VER CLIENTE" />
+               </children>
+            </Pane>
+            <TableView fx:id="tabelaMensagens" layoutX="41.0" layoutY="40.0" onKeyPressed="#selecionarTabelaMensagens" onMouseClicked="#selecionarTabelaMensagens" prefHeight="352.0" prefWidth="757.0">
+               <columns>
+                  <TableColumn fx:id="ColunaMensagensTitulo" prefWidth="341.0" text="TITULO" />
+                  <TableColumn fx:id="ColunaMensagensRemetente" minWidth="0.0" prefWidth="209.0" text="REMETENTE" />
+                  <TableColumn fx:id="ColunaMensagensLido" minWidth="0.0" prefWidth="69.0" text="LIDO" />
+                  <TableColumn fx:id="ColunaMensagensRespondido" prefWidth="133.0" text="RESPONDIDO" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Button fx:id="btnMensagensAbrir" layoutX="823.0" layoutY="150.0" mnemonicParsing="false" onAction="#abrirMensagem" prefHeight="60.0" prefWidth="197.0" text="ABRIR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="btnMensagensExcluir" layoutX="823.0" layoutY="246.0" mnemonicParsing="false" onAction="#excluirMensagem" prefHeight="60.0" prefWidth="197.0" text="EXCLUIR">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+      <Text fx:id="novaMensagem" fill="#f80000" layoutX="239.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Novo!!">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
